@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="A multi-stage LLM pipeline for generating, diversifying, validating, repairing, and publishing MITRE ATT&CK command datasets."
+  />
+  <title>MITRE ATT&CK Dataset Pipeline | Murat Ismail Sen</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../assets/css/tokens.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/project.css" />
+  <script src="../assets/js/main.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="../index.html">MIS</a>
+      <div class="nav-links static-links">
+        <a href="../index.html#projects">Projects</a>
+        <a href="cybersecurity.html">Cybersecurity</a>
+        <a class="icon-link" href="https://github.com/ismilesen" target="_blank" rel="noreferrer">
+          <img src="../assets/icons/github.svg" alt="" />
+          <span>GitHub</span>
+        </a>
+        <a class="icon-link" href="https://www.linkedin.com/in/ismail-sen-361b0a310/" target="_blank" rel="noreferrer">
+          <img src="../assets/icons/linkedin.svg" alt="" />
+          <span>LinkedIn</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <header class="project-hero container">
+        <a href="../index.html#projects" class="back-link">← Back to projects</a>
+
+        <div class="project-kicker">
+          <span>CSE 132 Final Project</span>
+          <span>AI Systems · Security · Data Engineering</span>
+        </div>
+
+        <h1>Automated MITRE ATT&amp;CK Dataset Generation</h1>
+        <p class="project-lede">
+          A multi-stage LLM pipeline that generates ATT&amp;CK-aligned security
+          commands, increases their diversity through controlled rewriting,
+          validates them for syntax and semantic alignment, selectively repairs
+          failures, and publishes the resulting dataset in Parquet format.
+        </p>
+
+        <div class="tag-list">
+          <span>Python</span>
+          <span>Qwen 2.5</span>
+          <span>PyTorch</span>
+          <span>Transformers</span>
+          <span>Modal</span>
+          <span>Hugging Face</span>
+          <span>PyArrow</span>
+          <span>Regex</span>
+        </div>
+
+        <div class="project-actions">
+          <a class="button button-primary" href="https://modal.com/notebooks/misen/main/nb-jX5qBd6ue2VRzbds6bfqz7" target="_blank" rel="noreferrer">
+            Open Modal notebook
+          </a>
+          <a class="button button-secondary" href="https://huggingface.co/datasets/miisen/cse132-attack-commands" target="_blank" rel="noreferrer">
+            View Hugging Face dataset
+          </a>
+          <a class="button button-secondary" href="../assets/images/projects/mitre-pipeline/project-report.pdf" target="_blank" rel="noreferrer">
+            Read project report
+          </a>
+        </div>
+      </header>
+
+      <section class="container metadata-strip" aria-label="Project metadata">
+        <div><span>Type</span><strong>Individual final project</strong></div>
+        <div><span>Model</span><strong>Qwen2.5-7B-Instruct</strong></div>
+        <div><span>Compute</span><strong>Modal · NVIDIA L40S</strong></div>
+        <div><span>Output</span><strong>550-row Parquet dataset</strong></div>
+        <div><span>Method</span><strong>Inference only</strong></div>
+      </section>
+
+      <section class="project-section container narrow">
+        <p class="section-number">01</p>
+        <h2>Building a dataset, not issuing a single prompt</h2>
+        <p class="lead-paragraph">
+          The central challenge was not asking an LLM to produce one plausible
+          command. It was designing a repeatable process that could create hundreds
+          of technique-labeled examples while controlling formatting failures,
+          semantic drift, repetition, unsafe output, and long-running inference.
+        </p>
+        <p>
+          The final system treats the model as a probabilistic component inside a
+          larger data pipeline. Each stage has a narrow responsibility, and failing
+          rows are repaired rather than forcing the entire dataset to be regenerated.
+        </p>
+      </section>
+
+      <section class="project-section container">
+        <div class="section-heading">
+          <p class="section-number">02</p>
+          <div>
+            <h2>Pipeline architecture</h2>
+            <p class="section-summary">
+              Generation, diversification, validation, repair, deduplication, and
+              publication are separated into explicit stages.
+            </p>
+          </div>
+        </div>
+
+        <img
+          class="content-image architecture-image"
+          src="../assets/images/projects/mitre-pipeline/pipeline-architecture.png"
+          alt="Architecture diagram for the multi-stage MITRE ATT&CK command dataset generation pipeline"
+        />
+      </section>
+
+      <section class="project-section container">
+        <div class="section-heading">
+          <p class="section-number">03</p>
+          <div>
+            <h2>Execution environment</h2>
+            <p class="section-summary">
+              Inference ran in a public Modal notebook using an NVIDIA L40S GPU,
+              Hugging Face Transformers, PyTorch, and Qwen2.5-7B-Instruct.
+            </p>
+          </div>
+        </div>
+
+        <figure class="single-media-card">
+          <img
+            src="../assets/images/projects/mitre-pipeline/modal-environment.jpg"
+            alt="Modal notebook showing package setup, GPU detection, and Qwen model initialization on an NVIDIA L40S"
+          />
+          <figcaption>
+            The notebook verifies the GPU environment, loads the tokenizer and model,
+            and constructs the text-generation pipeline used throughout the project.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="project-section container">
+        <div class="section-heading">
+          <p class="section-number">04</p>
+          <div>
+            <h2>Stage-by-stage implementation</h2>
+            <p class="section-summary">
+              The screenshots below correspond directly to the code responsible for
+              structuring, repairing, rewriting, sanitizing, and validating generated data.
+            </p>
+          </div>
+        </div>
+
+        <div class="pipeline-stage-list">
+          <article class="pipeline-stage">
+            <div class="stage-copy">
+              <span class="stage-index">01</span>
+              <p class="mono-label">Structured generation</p>
+              <h3>Constrain the first model response</h3>
+              <p>
+                The generator is prompted with a technique ID and name and instructed
+                to return only three fields: technique ID, technique name, and command.
+                Normalization and regular-expression extraction recover the fields even
+                when the model introduces minor formatting deviations.
+              </p>
+            </div>
+            <img
+              src="../assets/images/projects/mitre-pipeline/structured-generation.png"
+              alt="Python implementation of structured MITRE technique command generation and regex extraction"
+            />
+          </article>
+
+          <article class="pipeline-stage stage-reverse">
+            <div class="stage-copy">
+              <span class="stage-index">02</span>
+              <p class="mono-label">Format recovery</p>
+              <h3>Repair malformed structured output</h3>
+              <p>
+                A dedicated repair function extracts candidate JSON, escapes invalid
+                backslashes, removes trailing commas and control characters, normalizes
+                quotes and spacing, and performs a final parse attempt. This prevents a
+                small formatting error from discarding an otherwise usable generation.
+              </p>
+            </div>
+            <img
+              src="../assets/images/projects/mitre-pipeline/json-repair.png"
+              alt="Python function for repairing malformed JSON produced by an LLM"
+            />
+          </article>
+
+          <article class="pipeline-stage">
+            <div class="stage-copy">
+              <span class="stage-index">03</span>
+              <p class="mono-label">Diversity engineering</p>
+              <h3>Rewrite without losing technique alignment</h3>
+              <p>
+                The rewrite stage changes flags, syntax, tools, or structure while
+                retaining the command's original ATT&amp;CK meaning. A second rewrite
+                compounds the divergence so the dataset does not collapse into
+                repetitive internet-style examples.
+              </p>
+            </div>
+            <img
+              src="../assets/images/projects/mitre-pipeline/rewrite-stage.png"
+              alt="Python prompt used to create a diverse rewritten command for the same MITRE ATT&CK technique"
+            />
+          </article>
+
+          <article class="pipeline-stage stage-reverse">
+            <div class="stage-copy">
+              <span class="stage-index">04</span>
+              <p class="mono-label">Sanitization</p>
+              <h3>Normalize commands before evaluation</h3>
+              <p>
+                Generated commands are cleaned before validation. The sanitizer removes
+                newlines, repairs spacing, strips incomplete formatting fragments,
+                limits excessive token sequences, and collapses repeated whitespace.
+              </p>
+            </div>
+            <img
+              src="../assets/images/projects/mitre-pipeline/sanitize-command.png"
+              alt="Python function for sanitizing generated command strings"
+            />
+          </article>
+
+          <article class="pipeline-stage">
+            <div class="stage-copy">
+              <span class="stage-index">05</span>
+              <p class="mono-label">Syntactic validation</p>
+              <h3>Reject malformed or unsafe command strings</h3>
+              <p>
+                The syntax validator checks empty output, rejects a blacklist of
+                catastrophic destructive commands, attempts shell tokenization, and
+                performs basic quote-balance checks before a row proceeds.
+              </p>
+            </div>
+            <img
+              src="../assets/images/projects/mitre-pipeline/syntax-validation.png"
+              alt="Python syntax validation function including destructive-command filtering and shell parsing"
+            />
+          </article>
+
+          <article class="pipeline-stage stage-reverse">
+            <div class="stage-copy">
+              <span class="stage-index">06</span>
+              <p class="mono-label">Semantic validation</p>
+              <h3>Use a second LLM role as evaluator</h3>
+              <p>
+                The validator receives the candidate command and its expected technique,
+                then returns a constrained yes-or-no judgment. Failed rows are sent to
+                the repair path and revalidated instead of being accepted blindly.
+              </p>
+            </div>
+            <img
+              src="../assets/images/projects/mitre-pipeline/semantic-validation.png"
+              alt="Python semantic validation function asking an LLM whether a command represents a MITRE ATT&CK technique"
+            />
+          </article>
+        </div>
+      </section>
+
+      <section class="project-section container split-section">
+        <div>
+          <p class="section-number">05</p>
+          <h2>Why layered rewriting mattered</h2>
+        </div>
+        <div class="project-copy">
+          <p>
+            A single generation prompt produced commands that were too similar to
+            common public examples. Diversity improved only after the pipeline was
+            redesigned around successive transformations.
+          </p>
+          <ul class="case-study-list">
+            <li>Rewrite 1 introduced mild changes to flags, order, and syntax.</li>
+            <li>Rewrite 2 changed shells, tools, chaining, and execution context.</li>
+            <li>Tool rotation swapped functionally equivalent command-line utilities.</li>
+            <li>Duplicate mutation targeted only repeated rows rather than regenerating everything.</li>
+            <li>Environment variables, shell indirection, and command operators reduced template-like similarity.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="project-section container">
+        <div class="section-heading">
+          <p class="section-number">06</p>
+          <div>
+            <h2>Evaluation results</h2>
+            <p class="section-summary">
+              The project report records the final dataset size and approximate
+              validation and diversity measurements.
+            </p>
+          </div>
+        </div>
+
+        <div class="metric-grid mitre-metrics">
+          <article><strong>550</strong><span>Published rows</span></article>
+          <article><strong>91%</strong><span>Approximate syntax validity</span></article>
+          <article><strong>~85%</strong><span>Semantic accuracy after repair</span></article>
+          <article><strong>0.61</strong><span>Average neighbor similarity</span></article>
+        </div>
+
+        <p class="metric-note">
+          The semantic evaluator began near 70% accuracy and improved into the
+          mid-80% range after targeted repair. These are project evaluation estimates,
+          not claims of perfect correctness.
+        </p>
+      </section>
+
+      <section class="project-section container">
+        <div class="section-heading">
+          <p class="section-number">07</p>
+          <div>
+            <h2>Published dataset</h2>
+            <p class="section-summary">
+              The final output was exported to Parquet and published publicly through
+              Hugging Face Datasets.
+            </p>
+          </div>
+        </div>
+
+        <figure class="single-media-card">
+          <img
+            src="../assets/images/projects/mitre-pipeline/huggingface-dataset.jpg"
+            alt="Hugging Face dataset viewer showing 550 MITRE ATT&CK command rows and rewrite columns"
+          />
+          <figcaption>
+            Each row preserves the ATT&amp;CK technique identifier and name alongside
+            the original command and two progressively diversified rewrites.
+          </figcaption>
+        </figure>
+
+        <div class="dataset-schema">
+          <div><code>Technique_ID</code><span>ATT&amp;CK technique identifier</span></div>
+          <div><code>Technique_Name</code><span>Human-readable technique name</span></div>
+          <div><code>Original_Command</code><span>Initial structured generation</span></div>
+          <div><code>Rewrite_1</code><span>Mildly diversified command</span></div>
+          <div><code>Rewrite_2</code><span>More strongly diversified command</span></div>
+        </div>
+      </section>
+
+      <section class="project-section container">
+        <div class="section-heading">
+          <p class="section-number">08</p>
+          <div>
+            <h2>Engineering challenges</h2>
+            <p class="section-summary">
+              Most of the work involved containing the failure modes of probabilistic generation.
+            </p>
+          </div>
+        </div>
+
+        <div class="challenge-grid">
+          <article>
+            <p class="mono-label">Formatting</p>
+            <h3>Unreliable model structure</h3>
+            <p>Strict prompts, normalization, regex extraction, and repair logic converted inconsistent responses into machine-readable records.</p>
+          </article>
+          <article>
+            <p class="mono-label">Semantic drift</p>
+            <h3>Rewrites changed the intended behavior</h3>
+            <p>A separate validator role checked technique alignment and routed failures through targeted repair.</p>
+          </article>
+          <article>
+            <p class="mono-label">Repetition</p>
+            <h3>Outputs converged on familiar examples</h3>
+            <p>Layered rewrites, tool rotation, command mutation, and duplicate detection were used to increase variation.</p>
+          </article>
+          <article>
+            <p class="mono-label">Runtime</p>
+            <h3>Generation required several hours</h3>
+            <p>Incremental checkpoints allowed safe recovery and prevented a single interruption from invalidating the entire run.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="project-section container split-section">
+        <div>
+          <p class="section-number">09</p>
+          <h2>What this project demonstrates</h2>
+        </div>
+        <div class="project-copy">
+          <p>
+            The project demonstrates practical LLM systems engineering rather than
+            model training. It combines constrained prompting, parsing, data repair,
+            iterative generation, safety checks, evaluation, selective retries,
+            checkpointing, and dataset publication into a reproducible workflow.
+          </p>
+          <p>
+            The main lesson was that reliable AI-assisted data generation comes from
+            orchestration and safeguards. A sequence of small, testable stages was
+            substantially more effective than relying on one large prompt.
+          </p>
+        </div>
+      </section>
+
+      <section class="project-footer-cta container">
+        <p class="mono-label">Public project artifacts</p>
+        <h2>Inspect the notebook, dataset, and full report.</h2>
+        <div class="project-actions">
+          <a class="button button-primary" href="https://modal.com/notebooks/misen/main/nb-jX5qBd6ue2VRzbds6bfqz7" target="_blank" rel="noreferrer">
+            Modal notebook
+          </a>
+          <a class="button button-outline-light" href="https://huggingface.co/datasets/miisen/cse132-attack-commands" target="_blank" rel="noreferrer">
+            Hugging Face dataset
+          </a>
+          <a class="button button-outline-light" href="../assets/images/projects/mitre-pipeline/project-report.pdf" target="_blank" rel="noreferrer">
+            Project report
+          </a>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="footer container">
+    <p>Murat Ismail Sen</p>
+    <p id="copyright"></p>
+  </footer>
+</body>
+</html>

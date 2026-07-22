@@ -1,0 +1,1 @@
+Add the demonstration video as bananaspice-demo.mp4 and replace the placeholder in projects/bananaspice.html.

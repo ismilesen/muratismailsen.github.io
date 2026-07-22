@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="BananaSpice, a browser-based 3D circuit visualization and simulation platform developed with Godot, C++, Xschem, and NGSpice."
+  />
+  <title>BananaSpice | Murat Ismail Sen</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../assets/css/tokens.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/project.css" />
+  <script src="../assets/js/main.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="../index.html">MIS</a>
+      <div class="nav-links static-links">
+        <a href="../index.html#projects">Projects</a>
+        <a href="cybersecurity.html">Cybersecurity</a>
+        <a class="icon-link" href="https://github.com/ismilesen" target="_blank" rel="noreferrer">
+          <img src="../assets/icons/github.svg" alt="" />
+          <span>GitHub</span>
+        </a>
+        <a class="icon-link" href="https://www.linkedin.com/in/ismail-sen-361b0a310/" target="_blank" rel="noreferrer">
+          <img src="../assets/icons/linkedin.svg" alt="" />
+          <span>LinkedIn</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <header class="project-hero container">
+        <a href="../index.html#projects" class="back-link">← Back to projects</a>
+
+        <div class="project-kicker">
+          <span>Senior Capstone</span>
+          <span>Simulation · Visualization · Education</span>
+        </div>
+
+        <div class="banana-title-row">
+          <div>
+            <h1>BananaSpice</h1>
+            <p class="project-lede">
+              A browser-based visualization layer that combines Xschem circuit
+              descriptions and NGSpice simulation accuracy with an intuitive,
+              interactive 3D representation for circuit education.
+            </p>
+          </div>
+          <img
+            class="banana-logo"
+            src="../assets/images/projects/bananaspice/app-logo.png"
+            alt="BananaSpice application logo"
+          />
+        </div>
+
+        <div class="tag-list">
+          <span>Godot 4</span>
+          <span>GDScript</span>
+          <span>C++</span>
+          <span>GDExtension</span>
+          <span>NGSpice</span>
+          <span>Xschem</span>
+          <span>WebAssembly</span>
+          <span>GitHub Actions</span>
+        </div>
+
+        <div class="project-actions">
+          <a class="button button-primary icon-button" href="https://github.com/ismilesen/circuit-simulation" target="_blank" rel="noreferrer">
+            <img src="../assets/icons/github.svg" alt="" />
+            <span>Current repository</span>
+          </a>
+          <a class="button button-secondary icon-button" href="https://github.com/ismilesen/Circuit-Visualization" target="_blank" rel="noreferrer">
+            <img src="../assets/icons/github.svg" alt="" />
+            <span>Early visualizer</span>
+          </a>
+          <a class="button button-secondary" href="https://ismilesen.github.io/circuit-simulation/" target="_blank" rel="noreferrer">
+            Open live site
+          </a>
+        </div>
+      </header>
+
+      <section class="container project-media-hero">
+        <img
+          class="case-study-hero-image banana-hero"
+          src="../assets/images/projects/bananaspice/3d-simulation-live.jpeg"
+          alt="BananaSpice rendering a complex circuit in 3D with illuminated voltage paths and a transient voltage graph"
+        />
+      </section>
+
+      <section class="container metadata-strip" aria-label="Project metadata">
+        <div><span>Type</span><strong>Senior design capstone</strong></div>
+        <div><span>Role</span><strong>Primary visualization engineer</strong></div>
+        <div><span>Team</span><strong>5 developers</strong></div>
+        <div><span>Platform</span><strong>Browser and desktop</strong></div>
+        <div><span>Status</span><strong>Working prototype</strong></div>
+      </section>
+
+      <section class="project-section container narrow">
+        <p class="section-number">01</p>
+        <h2>Making established tools easier to understand</h2>
+        <p class="lead-paragraph">
+          BananaSpice does not attempt to replace Xschem or NGSpice. It acts as a
+          visual and interactive layer over established electronic design tools.
+          Schematics remain the source of circuit structure, and NGSpice remains the
+          simulation backend. BananaSpice converts their output into a spatial,
+          animated representation intended to help beginners understand what the
+          circuit is doing.
+        </p>
+      </section>
+
+      <section class="project-section container split-section">
+        <div>
+          <p class="section-number">02</p>
+          <h2>Murat's contribution</h2>
+        </div>
+        <div class="project-copy">
+          <p>
+            Murat was a primary contributor on the visualization side of the project.
+            His earlier Circuit Visualization repository established the Godot and
+            native-extension foundation that later developed into the capstone system.
+          </p>
+          <ul class="case-study-list">
+            <li>Developed the Godot-based 3D circuit visualization approach.</li>
+            <li>Worked on parsing schematic coordinates into circuit scene geometry.</li>
+            <li>Built component, wire, label, camera, and interaction behavior.</li>
+            <li>Mapped simulation values to visual color gradients and animation.</li>
+            <li>Contributed to the C++ and Godot integration used by the visualizer.</li>
+            <li>Helped adapt the project for web deployment through WebAssembly.</li>
+            <li>Iterated on usability for file upload, navigation, and live simulation controls.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="project-section container">
+        <div class="section-heading">
+          <p class="section-number">03</p>
+          <div>
+            <h2>The traditional learning gap</h2>
+            <p class="section-summary">
+              Professional tools are accurate, but their native outputs require
+              substantial background knowledge to interpret.
+            </p>
+          </div>
+        </div>
+
+        <div class="comparison-grid">
+          <article class="comparison-card">
+            <p class="mono-label">Xschem</p>
+            <h3>Dense schematic representation</h3>
+            <img
+              src="../assets/images/projects/bananaspice/xschem-comparison.jpg"
+              alt="A dense Xschem transistor-level schematic crossed out to represent its difficulty for beginners"
+            />
+            <p>
+              Schematics precisely describe topology, components, and connectivity,
+              but large transistor-level diagrams can become visually overwhelming.
+            </p>
+          </article>
+
+          <article class="comparison-card">
+            <p class="mono-label">NGSpice</p>
+            <h3>Numerical waveform output</h3>
+            <img
+              src="../assets/images/projects/bananaspice/ngspice-waveforms.png"
+              alt="Traditional NGSpice transient waveform graphs"
+            />
+            <p>
+              Waveforms accurately show electrical behavior, but students must mentally
+              map each signal back onto the circuit.
+            </p>
+          </article>
+
+          <article class="comparison-card comparison-card-wide">
+            <p class="mono-label">BananaSpice</p>
+            <h3>Interactive visual simulation</h3>
+            <img
+              src="../assets/images/projects/bananaspice/bananaspice-light-mode.png"
+              alt="BananaSpice browser interface displaying a 3D transistor circuit with upload and animation controls"
+            />
+            <p>
+              BananaSpice places components and wires into a navigable 3D scene, then
+              applies simulation values directly to the circuit through live visual feedback.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="project-section container">
+        <p class="section-number">04</p>
+        <h2>System architecture</h2>
+        <p class="section-summary">
+          Visualization and simulation remain separate concerns. A C++ GDExtension
+          connects Godot's rendering and interaction layer to NGSpice simulation data.
+        </p>
+        <img
+          class="content-image architecture-image"
+          src="../assets/images/projects/bananaspice/architecture.png"
+          alt="BananaSpice architecture showing schematic and netlist parsing, Godot rendering, a C++ simulation bridge, NGSpice, and WebAssembly deployment"
+        />
+      </section>
+
+      <section class="project-section container split-section">
+        <div>
+          <p class="section-number">05</p>
+          <h2>How the pipeline works</h2>
+        </div>
+        <div class="project-copy">
+          <ol class="numbered-flow">
+            <li>
+              <strong>Resolve circuit files.</strong>
+              The application accepts Xschem <code>.sch</code> schematics, supporting
+              <code>.sym</code> symbol definitions, and optional SPICE netlists.
+            </li>
+            <li>
+              <strong>Build the visual scene.</strong>
+              Parsed coordinates, symbols, pins, labels, and wires become Godot nodes
+              in a navigable 3D environment.
+            </li>
+            <li>
+              <strong>Run the electrical model.</strong>
+              NGSpice performs transient simulation through the native C++ integration.
+            </li>
+            <li>
+              <strong>Stream values into the renderer.</strong>
+              Callback data supplies voltages and currents to the Godot application.
+            </li>
+            <li>
+              <strong>Animate circuit behavior.</strong>
+              Voltage values drive wire glow, color gradients, plots, and live interaction.
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="project-section container">
+        <div class="section-heading">
+          <p class="section-number">06</p>
+          <div>
+            <h2>Engineering challenges</h2>
+            <p class="section-summary">
+              The major work involved connecting software systems with very different
+              assumptions about execution, data, and user interaction.
+            </p>
+          </div>
+        </div>
+
+        <div class="challenge-grid">
+          <article>
+            <p class="mono-label">Real-time mapping</p>
+            <h3>Simulation values to smooth visual feedback</h3>
+            <p>
+              Raw voltage output had to be associated with the correct visual nets and
+              transformed into understandable color and animation without distracting flicker.
+            </p>
+          </article>
+          <article>
+            <p class="mono-label">Continuous execution</p>
+            <h3>Extending batch-oriented simulation</h3>
+            <p>
+              The educational use case required long-running demonstrations and
+              interactive switching rather than only finite offline runs.
+            </p>
+          </article>
+          <article>
+            <p class="mono-label">File translation</p>
+            <h3>From schematic files to a usable scene</h3>
+            <p>
+              Xschem files contain coordinates and references rather than ready-made
+              graphics, requiring parsing, symbol resolution, and connectivity reconstruction.
+            </p>
+          </article>
+          <article>
+            <p class="mono-label">Browser delivery</p>
+            <h3>Native systems inside a web application</h3>
+            <p>
+              Godot, C++, file handling, and simulation behavior had to be adapted for
+              WebAssembly and deployed through an automated GitHub Pages workflow.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="project-section container">
+        <div class="section-heading">
+          <p class="section-number">07</p>
+          <div>
+            <h2>Designed for circuit education</h2>
+            <p class="section-summary">
+              The interface focuses on connecting physical circuit structure with
+              changing electrical behavior.
+            </p>
+          </div>
+        </div>
+
+        <div class="result-grid">
+          <article><strong>3D visualization</strong><span>Inspect connections and components spatially.</span></article>
+          <article><strong>Live voltage gradients</strong><span>See signal intensity directly on circuit nets.</span></article>
+          <article><strong>Interactive controls</strong><span>Change switches and inputs during a demonstration.</span></article>
+          <article><strong>Continuous simulation</strong><span>Run classroom examples for extended periods.</span></article>
+          <article><strong>Standard file support</strong><span>Use Xschem schematics, symbols, and SPICE data.</span></article>
+          <article><strong>Browser access</strong><span>Reduce installation barriers for students.</span></article>
+        </div>
+      </section>
+
+      <section class="project-section container">
+        <div class="section-heading">
+          <p class="section-number">08</p>
+          <div>
+            <h2>Video demonstration</h2>
+            <p class="section-summary">
+              A demonstration video can be added locally without changing the page layout.
+            </p>
+          </div>
+        </div>
+
+        <div class="video-placeholder" role="group" aria-label="Video demonstration placeholder">
+          <span class="video-play" aria-hidden="true">▶</span>
+          <h3>BananaSpice demonstration</h3>
+          <p>
+            Add the final video as
+            <code>assets/videos/bananaspice-demo.mp4</code>, then replace this placeholder
+            with the provided video element.
+          </p>
+        </div>
+      </section>
+
+      <section class="project-section container">
+        <div class="showcase-layout">
+          <div class="showcase-copy">
+            <img
+              class="baskin-logo"
+              src="../assets/images/projects/bananaspice/baskin-engineering-logo.jpg"
+              alt="UC Santa Cruz Baskin Engineering logo"
+            />
+            <p class="section-number">09</p>
+            <h2>Baskin Engineering Annual Student Project Showcase</h2>
+            <p>
+              BananaSpice was presented as a UCSC senior capstone project during the
+              Baskin Engineering student showcase. The event provided an opportunity
+              to demonstrate the prototype and discuss its educational and technical
+              goals with faculty, students, and visitors.
+            </p>
+          </div>
+
+          <div class="showcase-gallery">
+            <figure>
+              <img
+                src="../assets/images/projects/bananaspice/showcase-event.jpeg"
+                alt="BananaSpice poster displayed at the Baskin Engineering Annual Student Project Showcase"
+              />
+              <figcaption>BananaSpice displayed during the campus showcase.</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="../assets/images/projects/bananaspice/project-poster.jpg"
+                alt="BananaSpice senior capstone project poster"
+              />
+              <figcaption>The project poster summarizes the approach, architecture, and results.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-section container split-section">
+        <div>
+          <p class="section-number">10</p>
+          <h2>What this project demonstrates</h2>
+        </div>
+        <div class="project-copy">
+          <p>
+            BananaSpice demonstrates the ability to connect file formats, native
+            simulation libraries, real-time graphics, user interaction, and browser
+            deployment into one coherent educational tool. Murat's visual work helped
+            transform accurate but abstract circuit data into a system that users can
+            inspect and understand spatially.
+          </p>
+        </div>
+      </section>
+
+      <section class="project-footer-cta container">
+        <p class="mono-label">Open source capstone</p>
+        <h2>Explore the visualizer and circuit-simulation implementation.</h2>
+        <div class="project-actions">
+          <a class="button button-primary icon-button" href="https://github.com/ismilesen/circuit-simulation" target="_blank" rel="noreferrer">
+            <img src="../assets/icons/github.svg" alt="" />
+            <span>Current repository</span>
+          </a>
+          <a class="button button-outline-light" href="https://ismilesen.github.io/circuit-simulation/" target="_blank" rel="noreferrer">
+            Open live site
+          </a>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="footer container">
+    <p>Murat Ismail Sen</p>
+    <p id="copyright"></p>
+  </footer>
+</body>
+</html>

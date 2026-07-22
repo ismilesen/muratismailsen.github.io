@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cybersecurity coursework, CTF practice, digital forensics, network analysis, and cryptography work by Murat Ismail Sen." />
+  <title>Cybersecurity | Murat Ismail Sen</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../assets/css/tokens.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/project.css" />
+  <link rel="stylesheet" href="../assets/css/cybersecurity.css" />
+  <script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="../index.html">MIS</a>
+      <div class="nav-links static-links">
+        <a href="../index.html#projects">Projects</a>
+        <a class="active-nav" href="cybersecurity.html">Cybersecurity</a>
+        <a class="icon-link" href="https://github.com/ismilesen" target="_blank" rel="noreferrer">
+          <img src="../assets/icons/github.svg" alt="" /><span>GitHub</span>
+        </a>
+        <a class="icon-link" href="https://www.linkedin.com/in/ismail-sen-361b0a310/" target="_blank" rel="noreferrer">
+          <img src="../assets/icons/linkedin.svg" alt="" /><span>LinkedIn</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <header class="cyber-hero">
+        <div class="container cyber-hero-grid">
+          <div>
+            <a href="../index.html" class="back-link cyber-back">← Back to portfolio</a>
+            <div class="project-kicker"><span>Coursework · CTFs · Independent Practice</span></div>
+            <h1>Cybersecurity</h1>
+            <p class="project-lede">
+              Hands-on work across digital forensics, network traffic analysis, Linux systems,
+              web security, binary exploitation, and cryptography through university labs,
+              public challenges, and the NSA Codebreaker Challenge.
+            </p>
+            <div class="tag-list cyber-tags">
+              <span>Digital Forensics</span><span>Wireshark</span><span>PCAP Analysis</span>
+              <span>Linux</span><span>MITRE ATT&amp;CK</span><span>SQL Injection</span>
+              <span>Binary Exploitation</span><span>Cryptography</span>
+            </div>
+          </div>
+          <div class="hero-badge-wrap">
+            <img src="../assets/images/cybersecurity/nsa-codebreaker-badge.png" alt="NSA Codebreaker Challenge 2025 Task 1 completion badge" />
+          </div>
+        </div>
+      </header>
+
+      <section class="container cyber-metrics" aria-label="Cybersecurity experience summary">
+        <div><span>Practice areas</span><strong>Forensics · Networking · Exploitation · Crypto</strong></div>
+        <div><span>Primary tools</span><strong>Wireshark · tshark · Linux CLI</strong></div>
+        <div><span>Platforms</span><strong>NSA Codebreaker · CyLab · CryptoHack · picoCTF</strong></div>
+      </section>
+
+      <section class="project-section container narrow cyber-intro">
+        <p class="section-number">01</p>
+        <h2>Applied security practice</h2>
+        <p class="lead-paragraph">
+          This page documents educational security work rather than professional penetration testing.
+          The focus is on the investigative process: examining artifacts, interpreting packets,
+          identifying attack techniques, and using evidence to reach a defensible conclusion.
+        </p>
+      </section>
+
+      <section class="project-section container cyber-dark-section">
+        <div class="section-heading">
+          <p class="section-number light">02</p>
+          <div>
+            <p class="mono-label light-label">Digital forensics</p>
+            <h2>NSA Codebreaker Challenge</h2>
+            <p class="section-summary cyber-summary">
+              Completed introductory challenge work involving a Linux EXT2 filesystem image,
+              suspicious artifact discovery, and SHA-1 verification in a simulated incident-response scenario.
+            </p>
+          </div>
+        </div>
+
+        <div class="nsa-grid">
+          <div class="nsa-copy">
+            <img class="org-logo nsa-logo" src="../assets/images/cybersecurity/nsa-logo.jpg" alt="National Security Agency and Central Security Service seals" />
+            <h3>Evidence-driven filesystem analysis</h3>
+            <p>
+              The challenge required inspecting a provided disk image, locating an anomalous artifact,
+              and submitting the artifact's cryptographic hash. This reinforced a methodical workflow:
+              preserve the source, enumerate files and metadata, isolate suspicious evidence, and verify findings.
+            </p>
+            <ul class="clean-list">
+              <li>Linux filesystem inspection</li>
+              <li>Suspicious artifact identification</li>
+              <li>Hash-based evidence validation</li>
+              <li>Incident-response documentation</li>
+            </ul>
+          </div>
+          <figure class="dark-media-card">
+            <img src="../assets/images/cybersecurity/nsa-task-completion.jpg" alt="NSA Codebreaker Challenge task completion page" />
+            <figcaption>Challenge completion evidence. No solution details are reproduced.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="project-section container">
+        <div class="section-heading">
+          <p class="section-number">03</p>
+          <div>
+            <p class="mono-label">Network forensics</p>
+            <h2>Packet and protocol analysis</h2>
+            <p class="section-summary">
+              University exercises used Wireshark and tshark to analyze PCAP files, fingerprint systems,
+              inspect protocol behavior, and recover evidence from cleartext and authentication traffic.
+            </p>
+          </div>
+        </div>
+
+        <div class="network-overview">
+          <div class="network-copy">
+            <img class="wireshark-logo" src="../assets/images/cybersecurity/wireshark-logo.png" alt="Wireshark logo" />
+            <h3>Working at the packet level</h3>
+            <p>
+              The lab covered browser and operating-system fingerprinting, HTTP headers, TCP/IP characteristics,
+              FTP credential exposure, DB2/DRDA traffic, and Kerberos AS-REP material. The work emphasized filters,
+              packet reconstruction, protocol fields, and careful interpretation rather than automated answers.
+            </p>
+            <div class="tag-list">
+              <span>PCAP</span><span>TCP/IP</span><span>HTTP</span><span>FTP</span>
+              <span>DHCP</span><span>DNS</span><span>Kerberos</span><span>tshark</span>
+            </div>
+          </div>
+          <figure class="assignment-card">
+            <img src="../assets/images/cybersecurity/network-forensics-lab.jpg" alt="Network forensics and protocol analysis laboratory assignment" />
+            <figcaption>Lab scope and learning objectives for network forensics and protocol analysis.</figcaption>
+          </figure>
+        </div>
+
+        <figure class="feature-analysis">
+          <img src="../assets/images/cybersecurity/wireshark-ftp-analysis.png" alt="Wireshark displaying FTP packets and protocol details" />
+          <figcaption>
+            FTP traffic inspection in Wireshark, using a focused display filter and packet details to trace an authentication session.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="project-section container cyber-lab-section">
+        <div class="section-heading">
+          <p class="section-number">04</p>
+          <div>
+            <p class="mono-label">CTF laboratory</p>
+            <h2>CyLab Security Academy</h2>
+            <p class="section-summary">
+              Guided picoCTF exercises mapped practical challenges to digital forensics, web exploitation,
+              memory corruption, Linux permissions, remote services, and MITRE ATT&amp;CK concepts.
+            </p>
+          </div>
+        </div>
+
+        <div class="cylab-header-card">
+          <img src="../assets/images/cybersecurity/cylab-logo.jpg" alt="CyLab Security Academy logo" />
+          <div>
+            <h3>Completed challenge set</h3>
+            <p>
+              Ten assigned challenges were completed across forensics, cryptography, binary exploitation,
+              web exploitation, and general Linux skills.
+            </p>
+          </div>
+        </div>
+
+        <div class="challenge-table" role="table" aria-label="Completed CyLab challenges">
+          <div class="challenge-row challenge-head" role="row"><span>Challenge</span><span>Area</span><span>Concept</span></div>
+          <div class="challenge-row" role="row"><strong>DISKO 1</strong><span>Forensics</span><span>Disk artifacts</span></div>
+          <div class="challenge-row" role="row"><strong>Event-Viewing</strong><span>Forensics</span><span>Boot and logon persistence</span></div>
+          <div class="challenge-row" role="row"><strong>Matryoshka Doll</strong><span>Forensics</span><span>Nested file extraction</span></div>
+          <div class="challenge-row" role="row"><strong>hashcrack</strong><span>Cryptography</span><span>Password cracking</span></div>
+          <div class="challenge-row" role="row"><strong>SQLiLite</strong><span>Web</span><span>SQL injection</span></div>
+          <div class="challenge-row" role="row"><strong>buffer overflow 1</strong><span>Binary</span><span>Memory corruption</span></div>
+          <div class="challenge-row" role="row"><strong>Permissions</strong><span>Linux</span><span>Privilege and file permissions</span></div>
+          <div class="challenge-row" role="row"><strong>Operation Oni</strong><span>Forensics</span><span>Remote services</span></div>
+          <div class="challenge-row" role="row"><strong>Specialer</strong><span>Linux</span><span>Shell constraints</span></div>
+          <div class="challenge-row" role="row"><strong>Wireshark twoo twooo...</strong><span>Forensics</span><span>DNS traffic analysis</span></div>
+        </div>
+
+        <figure class="completion-proof">
+          <img src="../assets/images/cybersecurity/cylab-completed-challenges.jpg" alt="CyLab challenge dashboard showing completed security challenges" />
+          <figcaption>Completed challenge dashboard, retained as evidence of scope rather than as a solution walkthrough.</figcaption>
+        </figure>
+      </section>
+
+      <section class="project-section container">
+        <div class="section-heading">
+          <p class="section-number">05</p>
+          <div>
+            <p class="mono-label">Image forensics</p>
+            <h2>Recovering hidden information</h2>
+            <p class="section-summary">
+              Two challenge examples involved reasoning about image data rather than treating an image as a flat visual file.
+            </p>
+          </div>
+        </div>
+
+        <div class="forensics-case-list">
+          <article class="forensics-case">
+            <div class="case-copy">
+              <span class="case-index">Case 01</span>
+              <h3>Channel comparison and visual recovery</h3>
+              <p>
+                A noisy image concealed meaningful content. Comparing and transforming image data revealed a readable result,
+                illustrating how information can be distributed across channels or obscured by pixel-level noise.
+              </p>
+              <p class="case-note">The portfolio shows the before-and-after evidence without publishing the challenge answer.</p>
+            </div>
+            <div class="before-after-grid">
+              <figure><img src="../assets/images/cybersecurity/lemur-before.png" alt="Noisy source image from an image forensics challenge" /><figcaption>Before: noisy source</figcaption></figure>
+              <figure><img src="../assets/images/cybersecurity/lemur-result.png" alt="Recovered lemur image after processing" /><figcaption>After: recovered visual</figcaption></figure>
+            </div>
+          </article>
+
+          <article class="forensics-case matryoshka-case">
+            <div class="case-copy">
+              <span class="case-index">Case 02</span>
+              <h3>Nested Matryoshka extraction</h3>
+              <p>
+                The Matryoshka Doll challenge required repeatedly examining and extracting embedded content.
+                Each stage revealed a smaller image, continuing until the hidden challenge material was reached.
+              </p>
+              <p class="case-note">The exact command sequence was not documented at the time, so this summary stays at the level supported by the retained evidence.</p>
+            </div>
+            <div class="doll-sequence" aria-label="Sequence of progressively smaller nested doll images">
+              <figure><img src="../assets/images/cybersecurity/matryoshka-stage-1.jpg" alt="First Matryoshka doll image" /><figcaption>Stage 1</figcaption></figure>
+              <span aria-hidden="true">→</span>
+              <figure><img src="../assets/images/cybersecurity/matryoshka-stage-2.jpg" alt="Second smaller Matryoshka doll image" /><figcaption>Stage 2</figcaption></figure>
+              <span aria-hidden="true">→</span>
+              <figure><img src="../assets/images/cybersecurity/matryoshka-stage-3.jpg" alt="Third smaller Matryoshka doll image" /><figcaption>Stage 3</figcaption></figure>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="project-section container cyber-crypto-preview">
+        <div class="section-heading">
+          <p class="section-number light">06</p>
+          <div>
+            <p class="mono-label light-label">Cryptography</p>
+            <h2>CryptoHack progress</h2>
+            <p class="section-summary cyber-summary">
+              Current evidence includes completed introductory exercises in encoding, byte representation,
+              and XOR, with further cryptography material to be added as the page develops.
+            </p>
+          </div>
+        </div>
+        <div class="crypto-preview-grid">
+          <figure class="dark-media-card"><img src="../assets/images/cybersecurity/cryptohack-progress.jpg" alt="CryptoHack topic progress dashboard" /><figcaption>Topic-level progress across CryptoHack learning tracks.</figcaption></figure>
+          <figure class="dark-media-card"><img src="../assets/images/cybersecurity/cryptohack-introduction.jpg" alt="Completed CryptoHack introduction challenges" /><figcaption>Completed introductory exercises covering encoding and XOR fundamentals.</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="project-section container">
+        <div class="section-heading">
+          <p class="section-number">07</p>
+          <div><h2>Technical coverage</h2><p class="section-summary">A concise inventory of the areas represented by the work above.</p></div>
+        </div>
+        <div class="skill-domain-grid">
+          <article><span>01</span><h3>Digital forensics</h3><p>Disk images, artifacts, hashes, nested files, and evidence validation.</p></article>
+          <article><span>02</span><h3>Network analysis</h3><p>Wireshark, tshark, PCAPs, TCP/IP, HTTP, FTP, DNS, and Kerberos.</p></article>
+          <article><span>03</span><h3>Offensive fundamentals</h3><p>SQL injection, buffer overflows, password cracking, and privilege concepts.</p></article>
+          <article><span>04</span><h3>Security frameworks</h3><p>MITRE ATT&amp;CK mapping and scenario-based defensive analysis.</p></article>
+          <article><span>05</span><h3>Linux systems</h3><p>Command-line investigation, permissions, filesystems, and constrained shells.</p></article>
+          <article><span>06</span><h3>Cryptography</h3><p>Encoding, XOR, hashes, symmetric ciphers, and continuing public-key study.</p></article>
+        </div>
+      </section>
+
+      <section class="container project-footer-cta cyber-footer-cta">
+        <p class="section-number light">Ongoing work</p>
+        <h2>Security practice is being documented as it continues.</h2>
+        <p>
+          Additional cryptography and Wireshark material will be added when supporting artifacts are available.
+          This page intentionally avoids challenge answers, proprietary material, and unsupported claims about the solving process.
+        </p>
+        <a class="button button-light" href="../index.html#projects">Return to portfolio</a>
+      </section>
+    </article>
+  </main>
+
+  <footer class="footer container"><p>Designed and built for Murat Ismail Sen.</p><p id="copyright"></p></footer>
+</body>
+</html>

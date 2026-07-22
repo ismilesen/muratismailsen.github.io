@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="UCSC Meetup, a collaborative mobile map application for discovering and organizing campus meetups."
+  />
+  <title>UCSC Meetup | Murat Ismail Sen</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../assets/css/tokens.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/project.css" />
+  <script src="../assets/js/main.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="../index.html">MIS</a>
+      <div class="nav-links static-links">
+        <a href="../index.html#projects">Projects</a>
+        <a href="cybersecurity.html">Cybersecurity</a>
+        <a class="icon-link" href="https://github.com/ismilesen" target="_blank" rel="noreferrer">
+          <img src="../assets/icons/github.svg" alt="" />
+          <span>GitHub</span>
+        </a>
+        <a class="icon-link" href="https://www.linkedin.com/in/ismail-sen-361b0a310/" target="_blank" rel="noreferrer">
+          <img src="../assets/icons/linkedin.svg" alt="" />
+          <span>LinkedIn</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <header class="project-hero container">
+        <a href="../index.html#projects" class="back-link">← Back to projects</a>
+
+        <div class="project-kicker">
+          <span>Mobile Application</span>
+          <span>December 2025</span>
+        </div>
+
+        <h1>UCSC Meetup</h1>
+
+        <p class="project-lede">
+          A collaborative mobile application that enables UCSC students to discover,
+          create, and join campus meetups through an interactive map.
+        </p>
+
+        <div class="tag-list">
+          <span>React Native</span>
+          <span>Expo</span>
+          <span>Node.js</span>
+          <span>Express</span>
+          <span>MongoDB</span>
+          <span>OAuth</span>
+          <span>Apple Maps</span>
+          <span>Railway</span>
+        </div>
+
+        <div class="project-actions">
+          <a class="button button-primary icon-button" href="https://github.com/huutristan/UCSC-Meetup" target="_blank" rel="noreferrer">
+            <img src="../assets/icons/github.svg" alt="" />
+            <span>View source</span>
+          </a>
+        </div>
+      </header>
+
+      <section class="container project-media-hero">
+        <img
+          class="case-study-hero-image"
+          src="../assets/images/projects/ucsc-meetup/app-title-map.jpg"
+          alt="UCSC Meetup title slide shown over a map of the UCSC campus"
+        />
+      </section>
+
+      <section class="container metadata-strip" aria-label="Project metadata">
+        <div><span>Type</span><strong>Academic team project</strong></div>
+        <div><span>Role</span><strong>Frontend-heavy full stack</strong></div>
+        <div><span>Team</span><strong>5 developers</strong></div>
+        <div><span>Method</span><strong>Scrum</strong></div>
+        <div><span>Status</span><strong>Completed</strong></div>
+      </section>
+
+      <section class="project-section container narrow">
+        <p class="section-number">01</p>
+        <h2>Overview</h2>
+        <p class="lead-paragraph">
+          Student events, study groups, and informal meetups happen throughout the
+          UCSC campus, but they are often difficult to discover because information
+          is scattered across different communication channels. UCSC Meetup provides
+          a centralized mobile experience for creating and locating events on a shared map.
+        </p>
+      </section>
+
+      <section class="project-section container branding-section">
+        <div>
+          <p class="section-number">Branding</p>
+          <h2>Project identity</h2>
+          <p class="section-summary">
+            The application uses UCSC colors and campus imagery to make the product
+            immediately recognizable to its intended student audience.
+          </p>
+        </div>
+        <img
+          class="brand-image"
+          src="../assets/images/projects/ucsc-meetup/ucsc-meetup-logos.jpg"
+          alt="UCSC Meetup logo using UCSC colors and a campus map pin mascot"
+        />
+      </section>
+
+      <section class="project-section container split-section">
+        <div>
+          <p class="section-number">02</p>
+          <h2>Murat's contribution</h2>
+        </div>
+        <div class="project-copy">
+          <p>
+            Murat contributed across the React Native frontend and supporting backend
+            integration, with most of his work centered on user-facing application flows.
+          </p>
+          <ul class="case-study-list">
+            <li>Developed the UCSC map screen and map-navigation constraints.</li>
+            <li>Established shared event state using React Context.</li>
+            <li>Expanded event-creation and event-management workflows.</li>
+            <li>Built profile and profile-editing functionality.</li>
+            <li>Integrated persistent authentication and user sessions.</li>
+            <li>Implemented join, leave, and delete interactions from the map experience.</li>
+            <li>Added support for event header and gallery images.</li>
+            <li>Contributed to MongoDB schema changes, API integration, debugging, and merges.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="project-section container split-section">
+        <div>
+          <p class="section-number">03</p>
+          <h2>The problem</h2>
+        </div>
+        <div class="project-copy">
+          <p>
+            Existing campus communication channels make spontaneous gatherings and
+            smaller student-led events easy to miss. The team wanted to make those
+            activities visible through a simple map-first interface where authenticated
+            users could create meetups, inspect event details, join events, and manage
+            their own participation.
+          </p>
+        </div>
+      </section>
+
+      <section class="project-section container">
+        <p class="section-number">04</p>
+        <h2>System architecture</h2>
+        <img
+          class="content-image"
+          src="../assets/images/projects/ucsc-meetup/system-architecture.jpg"
+          alt="System architecture diagram for UCSC Meetup"
+        />
+        <p class="image-caption">
+          The mobile frontend communicates with a Node.js and Express API. MongoDB
+          stores user and meetup data, OAuth supports authentication, Apple Maps
+          provides the location interface, and Railway hosts the backend.
+        </p>
+      </section>
+
+
+      <section class="project-section container">
+        <div class="section-heading">
+          <p class="section-number">05</p>
+          <div>
+            <h2>Feature examples</h2>
+            <p class="section-summary">
+              Selected views from the completed mobile application.
+            </p>
+          </div>
+        </div>
+
+        <div class="gallery-grid">
+          <figure>
+            <img
+              class="gallery-image"
+              src="../assets/images/projects/ucsc-meetup/my-meetups-screen.jpg"
+              alt="My Meetups screen in the UCSC Meetup application"
+            />
+            <figcaption>
+              Users can view the events they created and the events they joined.
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img
+              class="gallery-image"
+              src="../assets/images/projects/ucsc-meetup/my-meetups-screen-live.jpg"
+              alt="My Meetups screen showing an event currently marked live"
+            />
+            <figcaption>
+              A live status indicator distinguishes meetups that are currently in progress.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="project-section container split-section">
+        <div>
+          <p class="section-number">06</p>
+          <h2>Technology stack</h2>
+        </div>
+        <div class="project-copy">
+          <img
+            class="content-image compact-image"
+            src="../assets/images/projects/ucsc-meetup/technology-stacks.jpg"
+            alt="Technology stack used by UCSC Meetup"
+          />
+        </div>
+      </section>
+
+      <section class="project-section container split-section">
+        <div>
+          <p class="section-number">07</p>
+          <h2>Challenges and lessons</h2>
+        </div>
+        <div class="challenge-list">
+          <article>
+            <p class="mono-label">Challenge</p>
+            <h3>Learning unfamiliar technologies</h3>
+            <p>
+              The team had to learn new frameworks, languages, deployment tools, and
+              Scrum practices while building the application from the ground up.
+            </p>
+          </article>
+
+          <article>
+            <p class="mono-label">Challenge</p>
+            <h3>Coordination and technical debt</h3>
+            <p>
+              Inconsistent schedules and unclear task ownership created merge conflicts,
+              uneven workloads, and code that became harder to navigate.
+            </p>
+          </article>
+
+          <article>
+            <p class="mono-label">Lesson</p>
+            <h3>Modularity and communication matter</h3>
+            <p>
+              The team concluded that more consistent attendance, earlier communication,
+              and better code modularization would have reduced debugging and integration costs.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="project-footer-cta container">
+        <p class="mono-label">Source repository</p>
+        <h2>Review the implementation and commit history.</h2>
+        <a class="button button-primary icon-button" href="https://github.com/huutristan/UCSC-Meetup" target="_blank" rel="noreferrer">
+          <img src="../assets/icons/github.svg" alt="" />
+          <span>Open GitHub</span>
+        </a>
+      </section>
+    </article>
+  </main>
+
+  <footer class="footer container">
+    <p>Murat Ismail Sen</p>
+    <p id="copyright"></p>
+  </footer>
+</body>
+</html>

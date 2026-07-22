@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Portfolio of Murat Ismail Sen, a Computer Science graduate from the University of California, Santa Cruz."
+  />
+  <title>Murat Ismail Sen | Computer Science</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/home.css" />
+  <script src="assets/js/main.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="Murat Ismail Sen homepage">MIS</a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="nav-links"
+        aria-label="Open navigation menu"
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links" id="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="projects/cybersecurity.html">Cybersecurity</a>
+        <a href="#interests">Interests</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">Computer Science · Software Engineering · Security</p>
+
+        <h1>Murat Ismail Sen</h1>
+
+        <p class="hero-description">
+          Computer Science graduate from the University of California, Santa Cruz,
+          with broad technical interests and a growing focus on security.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">View projects</a>
+          <a class="button button-secondary" href="resume.pdf" target="_blank" rel="noreferrer">
+            View résumé
+          </a>
+        </div>
+
+        <div class="profile-links" aria-label="Professional profiles">
+          <a class="icon-link" href="https://github.com/ismilesen" target="_blank" rel="noreferrer">
+            <img src="assets/icons/github.svg" alt="" />
+            <span>GitHub</span>
+          </a>
+          <a class="icon-link" href="https://www.linkedin.com/in/ismail-sen-361b0a310/" target="_blank" rel="noreferrer">
+            <img src="assets/icons/linkedin.svg" alt="" />
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+
+      <figure class="hero-visual">
+        <div class="technical-grid" aria-hidden="true"></div>
+        <img
+          src="assets/images/profile/murat-cryptography.jpeg"
+          alt="Murat Ismail Sen standing beside a whiteboard while working on cryptography concepts"
+        />
+        <figcaption>
+          Exploring pseudorandom generators, functions, and permutations.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="section container" id="projects">
+      <div class="section-heading">
+        <p class="section-number">01</p>
+        <div>
+          <h2>Selected projects</h2>
+          <p class="section-summary">
+            Detailed case studies will be added as Murat's project materials are reviewed.
+          </p>
+        </div>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card project-card-featured">
+          <div class="project-media"><img src="assets/images/projects/living-world/cover-photo.jpeg" alt="Living World research prototype banner" /></div>
+          <div class="project-card-body">
+            <div class="tag-list"><span>Featured</span><span>AI Systems</span><span>Game AI</span><span>Research</span></div>
+            <h3>Living World</h3>
+            <p>A research prototype investigating how LLMs can become aware of game state, NPC behavior, history, reputation, and player emotion instead of functioning as isolated chatbots.</p>
+            <a href="projects/living-world.html" class="text-link">View research case study <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <article class="project-card project-card-empty supporting-project-card">
+          <p class="mono-label">Mobile · Full Stack</p><h3>UCSC Meetup</h3>
+          <p>A collaborative map application for creating, discovering, and joining campus meetups.</p>
+          <a href="projects/ucsc-meetup.html" class="text-link">View case study <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="project-card supporting-project-card">
+          <p class="mono-label">Simulation · Graphics · Systems</p>
+          <h3>BananaSpice</h3>
+          <p>
+            A browser-based visualization layer that turns Xschem schematics and
+            NGSpice simulation data into interactive 3D circuits with live voltage animation.
+          </p>
+          <a href="projects/bananaspice.html" class="text-link">
+            View case study <span aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <article class="project-card supporting-project-card">
+          <p class="mono-label">Forensics · Networking · CTF Practice</p>
+          <h3>Cybersecurity</h3>
+          <p>Hands-on coursework and public challenges across Wireshark analysis, digital forensics, Linux, exploitation fundamentals, and cryptography.</p>
+          <a href="projects/cybersecurity.html" class="text-link">View security experience <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="project-card supporting-project-card">
+          <p class="mono-label">AI Systems · Security · Data Engineering</p>
+          <h3>MITRE ATT&amp;CK Dataset Pipeline</h3>
+          <p>
+            A multi-stage LLM pipeline that generates, diversifies, validates,
+            repairs, and publishes ATT&amp;CK-aligned command data.
+          </p>
+          <a href="projects/mitre-attack-pipeline.html" class="text-link">
+            View case study <span aria-hidden="true">→</span>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" id="interests">
+      <div class="section-heading">
+        <p class="section-number">02</p>
+        <div>
+          <h2>Technical interests</h2>
+          <p class="section-summary">
+            Kept broad for now, then refined according to the strongest project evidence.
+          </p>
+        </div>
+      </div>
+
+      <div class="interest-grid">
+        <div class="interest-item"><span>01</span><p>Cybersecurity</p></div>
+        <div class="interest-item"><span>02</span><p>Software Engineering</p></div>
+        <div class="interest-item"><span>03</span><p>Algorithms</p></div>
+        <div class="interest-item"><span>04</span><p>Systems</p></div>
+        <div class="interest-item"><span>05</span><p>Artificial Intelligence</p></div>
+        <div class="interest-item"><span>06</span><p>Computer Graphics</p></div>
+      </div>
+    </section>
+
+    <section class="section container" id="education">
+      <div class="education-card">
+        <div>
+          <p class="section-number">03</p>
+          <h2>Education</h2>
+        </div>
+
+        <div class="education-details">
+          <p class="education-school">University of California, Santa Cruz</p>
+          <p class="education-degree">Bachelor of Science in Computer Science</p>
+          <p class="education-note">
+            Relevant coursework and academic highlights will be added after Murat's
+            materials are reviewed.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="contact">
+      <div class="contact-card">
+        <p class="section-number light">04</p>
+        <h2>Connect with Murat.</h2>
+        <p>
+          Review his public repositories and professional profile while this portfolio
+          continues to develop.
+        </p>
+
+        <div class="contact-actions">
+          <a class="button button-light icon-button" href="https://github.com/ismilesen" target="_blank" rel="noreferrer">
+            <img src="assets/icons/github.svg" alt="" />
+            <span>GitHub</span>
+          </a>
+          <a class="button button-outline-light icon-button" href="https://www.linkedin.com/in/ismail-sen-361b0a310/" target="_blank" rel="noreferrer">
+            <img src="assets/icons/linkedin.svg" alt="" />
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <p>Designed and built for Murat Ismail Sen.</p>
+    <p id="copyright"></p>
+  </footer>
+</body>
+</html>
