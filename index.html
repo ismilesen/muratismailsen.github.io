@@ -21,6 +21,267 @@
   <link rel="stylesheet" href="assets/css/components.css" />
   <link rel="stylesheet" href="assets/css/home.css" />
   <script src="assets/js/main.js" defer></script>
+
+  <style id="education-section-styles">
+    #education .edu-editorial {
+      overflow: hidden;
+      border: 1px solid #d9d5cc;
+      border-radius: 28px;
+      background: #f4f0e7;
+      box-shadow: 0 20px 60px rgba(31, 38, 46, 0.08);
+    }
+
+    #education .edu-editorial-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      min-height: 122px;
+      padding: 22px clamp(24px, 4vw, 52px);
+      border-bottom: 1px solid #d9d5cc;
+    }
+
+    #education .edu-section-title {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex: 0 0 auto;
+    }
+
+    #education .edu-number {
+      color: #174f7d;
+      font-family: "JetBrains Mono", monospace;
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+    }
+
+    #education .edu-label {
+      color: #25313b;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.82rem;
+      letter-spacing: 0.34em;
+      text-transform: uppercase;
+    }
+
+    #education .edu-brand-lockup {
+      display: flex !important;
+      flex-direction: row !important;
+      flex-wrap: nowrap !important;
+      align-items: center !important;
+      justify-content: flex-end;
+      gap: clamp(14px, 2vw, 28px);
+      min-width: 0;
+      margin-left: auto;
+    }
+
+    #education .edu-wordmark {
+      display: block !important;
+      width: clamp(210px, 27vw, 380px) !important;
+      height: 72px !important;
+      max-width: none !important;
+      object-fit: contain;
+      object-position: right center;
+      flex: 0 1 auto;
+    }
+
+    #education .edu-slug {
+      display: block !important;
+      width: clamp(58px, 6vw, 84px) !important;
+      height: 72px !important;
+      max-width: none !important;
+      object-fit: contain;
+      flex: 0 0 auto;
+    }
+
+    #education .edu-editorial-body {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
+      gap: clamp(28px, 5vw, 64px);
+      padding: clamp(28px, 5vw, 60px);
+    }
+
+    #education .edu-copy-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    #education .edu-school,
+    #education .edu-feature-eyebrow {
+      margin: 0;
+      color: #66717b;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.73rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    #education .edu-degree {
+      margin: 12px 0 0;
+      color: #132231;
+      font-size: clamp(2.8rem, 6vw, 5.4rem);
+      line-height: 0.92;
+      letter-spacing: -0.065em;
+    }
+
+    #education .edu-degree-type {
+      margin: 12px 0 0;
+      color: #174f7d;
+      font-size: clamp(1.05rem, 2vw, 1.35rem);
+      font-weight: 600;
+    }
+
+    #education .edu-rule {
+      width: 100%;
+      height: 1px;
+      margin: clamp(24px, 4vw, 38px) 0 4px;
+      background: #cec8bc;
+    }
+
+    #education .edu-feature {
+      display: grid;
+      grid-template-columns: 42px minmax(0, 1fr);
+      gap: 18px;
+      padding: 22px 0;
+      border-bottom: 1px solid #d8d2c7;
+    }
+
+    #education .edu-feature-number {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border: 1px solid #b89b53;
+      border-radius: 50%;
+      color: #9b761e;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.72rem;
+    }
+
+    #education .edu-feature h4 {
+      margin: 6px 0 0;
+      color: #152534;
+      font-size: clamp(1.25rem, 2vw, 1.65rem);
+      letter-spacing: -0.025em;
+    }
+
+    #education .edu-feature p:last-child {
+      margin: 8px 0 0;
+      max-width: 560px;
+      color: #5f6870;
+      line-height: 1.65;
+    }
+
+    #education .edu-focus {
+      padding-top: 24px;
+    }
+
+    #education .edu-focus-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 14px;
+    }
+
+    #education .edu-focus-list span {
+      padding: 9px 13px;
+      border: 1px solid #cfc8bc;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.42);
+      color: #384652;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.74rem;
+    }
+
+    #education .edu-photo {
+      position: relative;
+      min-height: 570px;
+      margin: 0;
+      overflow: hidden;
+      border-radius: 20px;
+      background: #18232d;
+    }
+
+    #education .edu-photo::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(7, 17, 25, 0.64), transparent 36%);
+      pointer-events: none;
+    }
+
+    #education .edu-photo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 570px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    #education .edu-photo figcaption {
+      position: absolute;
+      z-index: 1;
+      right: 20px;
+      bottom: 18px;
+      left: 20px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      color: #f4f6f8;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 900px) {
+      #education .edu-editorial-header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      #education .edu-brand-lockup {
+        justify-content: flex-start;
+        width: 100%;
+        margin-left: 0;
+      }
+
+      #education .edu-editorial-body {
+        grid-template-columns: 1fr;
+      }
+
+      #education .edu-photo,
+      #education .edu-photo img {
+        min-height: 420px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      #education .edu-wordmark {
+        width: min(67vw, 245px) !important;
+        height: 56px !important;
+      }
+
+      #education .edu-slug {
+        width: min(17vw, 62px) !important;
+        height: 56px !important;
+      }
+
+      #education .edu-brand-lockup {
+        gap: 10px;
+      }
+
+      #education .edu-editorial-body {
+        padding: 24px;
+      }
+
+      #education .edu-photo,
+      #education .edu-photo img {
+        min-height: 320px;
+      }
+    }
+  </style>
+
 </head>
 
 <body>
@@ -114,41 +375,62 @@
           </div>
         </article>
 
-        <article class="project-card project-card-empty supporting-project-card">
-          <p class="mono-label">Mobile · Full Stack</p><h3>UCSC Meetup</h3>
-          <p>A collaborative map application for creating, discovering, and joining campus meetups.</p>
-          <a href="projects/ucsc-meetup.html" class="text-link">View case study <span aria-hidden="true">→</span></a>
-        </article>
-
         <article class="project-card supporting-project-card">
-          <p class="mono-label">Simulation · Graphics · Systems</p>
-          <h3>BananaSpice</h3>
-          <p>
-            A browser-based visualization layer that turns Xschem schematics and
-            NGSpice simulation data into interactive 3D circuits with live voltage animation.
-          </p>
-          <a href="projects/bananaspice.html" class="text-link">
-            View case study <span aria-hidden="true">→</span>
+          <a class="supporting-project-media" href="projects/ucsc-meetup.html" aria-label="View the UCSC Meetup case study">
+            <img src="assets/images/projects/ucsc-meetup/card-cover.jpg" alt="UCSC Meetup logo featuring the Sammy Slug mascot and a map pin" />
           </a>
+          <div class="supporting-project-content">
+            <p class="mono-label">Mobile · Full Stack</p>
+            <h3>UCSC Meetup</h3>
+            <p>A collaborative map application for creating, discovering, and joining campus meetups.</p>
+            <a href="projects/ucsc-meetup.html" class="text-link">View case study <span aria-hidden="true">→</span></a>
+          </div>
         </article>
 
         <article class="project-card supporting-project-card">
-          <p class="mono-label">Forensics · Networking · CTF Practice</p>
-          <h3>Cybersecurity</h3>
-          <p>Hands-on coursework and public challenges across Wireshark analysis, digital forensics, Linux, exploitation fundamentals, and cryptography.</p>
-          <a href="projects/cybersecurity.html" class="text-link">View security experience <span aria-hidden="true">→</span></a>
-        </article>
-
-        <article class="project-card supporting-project-card">
-          <p class="mono-label">AI Systems · Security · Data Engineering</p>
-          <h3>MITRE ATT&amp;CK Dataset Pipeline</h3>
-          <p>
-            A multi-stage LLM pipeline that generates, diversifies, validates,
-            repairs, and publishes ATT&amp;CK-aligned command data.
-          </p>
-          <a href="projects/mitre-attack-pipeline.html" class="text-link">
-            View case study <span aria-hidden="true">→</span>
+          <a class="supporting-project-media" href="projects/bananaspice.html" aria-label="View the BananaSpice case study">
+            <img src="assets/images/projects/bananaspice/card-cover.jpeg" alt="BananaSpice logo featuring a stylized banana slug surrounded by circuit diagrams" />
           </a>
+          <div class="supporting-project-content">
+            <p class="mono-label">Simulation · Graphics · Systems</p>
+            <h3>BananaSpice</h3>
+            <p>
+              A browser-based visualization layer that turns Xschem schematics and
+              NGSpice simulation data into interactive 3D circuits with live voltage animation.
+            </p>
+            <a href="projects/bananaspice.html" class="text-link">
+              View case study <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card supporting-project-card">
+          <a class="supporting-project-media" href="projects/cybersecurity.html" aria-label="View the cybersecurity experience page">
+            <img src="assets/images/projects/cybersecurity/card-cover.jpeg" alt="Abstract cybersecurity visualization with glowing security text and code" />
+          </a>
+          <div class="supporting-project-content">
+            <p class="mono-label">Forensics · Networking · CTF Practice</p>
+            <h3>Cybersecurity</h3>
+            <p>Hands-on coursework and public challenges across Wireshark analysis, digital forensics, Linux, exploitation fundamentals, and cryptography.</p>
+            <a href="projects/cybersecurity.html" class="text-link">View security experience <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <article class="project-card supporting-project-card">
+          <a class="supporting-project-media mitre-media" href="projects/mitre-attack-pipeline.html" aria-label="View the MITRE ATT&amp;CK Dataset Pipeline case study">
+            <img src="assets/images/projects/mitre-attack/card-cover.png" alt="MITRE ATT&amp;CK logo" />
+          </a>
+          <div class="supporting-project-content">
+            <p class="mono-label">AI Systems · Security · Data Engineering</p>
+            <h3>MITRE ATT&amp;CK Dataset Pipeline</h3>
+            <p>
+              A multi-stage LLM pipeline that generates, diversifies, validates,
+              repairs, and publishes ATT&amp;CK-aligned command data.
+            </p>
+            <a href="projects/mitre-attack-pipeline.html" class="text-link">
+              View case study <span aria-hidden="true">→</span>
+            </a>
+          </div>
         </article>
       </div>
     </section>
@@ -175,19 +457,80 @@
     </section>
 
     <section class="section container" id="education">
-      <div class="education-card">
-        <div>
-          <p class="section-number">03</p>
-          <h2>Education</h2>
+      <div class="edu-editorial">
+        <div class="edu-editorial-header">
+          <div class="edu-section-title">
+            <span class="edu-number">03</span>
+            <span class="edu-label">Education</span>
+          </div>
+
+          <div class="edu-brand-lockup">
+            <img
+              src="assets/images/education/ucsc-title-transparent.png"
+              alt="UC Santa Cruz"
+              class="edu-wordmark"
+            />
+            <img
+              src="assets/images/education/buff-slug-transparent.png"
+              alt="UC Santa Cruz banana slug mascot"
+              class="edu-slug"
+            />
+          </div>
         </div>
 
-        <div class="education-details">
-          <p class="education-school">University of California, Santa Cruz</p>
-          <p class="education-degree">Bachelor of Science in Computer Science</p>
-          <p class="education-note">
-            Relevant coursework and academic highlights will be added after Murat's
-            materials are reviewed.
-          </p>
+        <div class="edu-editorial-body">
+          <div class="edu-copy-column">
+            <p class="edu-school">University of California, Santa Cruz</p>
+            <h3 class="edu-degree">Computer Science</h3>
+            <p class="edu-degree-type">Bachelor of Science</p>
+
+            <div class="edu-rule"></div>
+
+            <div class="edu-feature">
+              <span class="edu-feature-number">01</span>
+              <div>
+                <p class="edu-feature-eyebrow">Academic distinction</p>
+                <h4>Dean’s Honors</h4>
+                <p>
+                  Recognized throughout undergraduate study for sustained
+                  academic performance.
+                </p>
+              </div>
+            </div>
+
+            <div class="edu-feature">
+              <span class="edu-feature-number">02</span>
+              <div>
+                <p class="edu-feature-eyebrow">Graduate study</p>
+                <h4>Master of Science Student</h4>
+                <p>
+                  Continuing graduate study in Computer Science at UC Santa Cruz.
+                </p>
+              </div>
+            </div>
+
+            <div class="edu-focus">
+              <p class="edu-feature-eyebrow">Technical focus</p>
+              <div class="edu-focus-list">
+                <span>Cybersecurity</span>
+                <span>Artificial Intelligence</span>
+                <span>Software Systems</span>
+                <span>Cryptography</span>
+                <span>Computer Graphics</span>
+              </div>
+            </div>
+          </div>
+
+          <figure class="edu-photo">
+            <img
+              src="assets/images/education/rainy-campus.jpeg"
+              alt="Rainy pedestrian bridge surrounded by redwood trees at UC Santa Cruz"
+            />
+            <figcaption>
+              <span>UC Santa Cruz</span>
+              <span>Redwood campus</span>
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>

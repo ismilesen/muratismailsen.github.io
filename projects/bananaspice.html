@@ -29,7 +29,6 @@
       <a class="brand" href="../index.html">MIS</a>
       <div class="nav-links static-links">
         <a href="../index.html#projects">Projects</a>
-        <a href="cybersecurity.html">Cybersecurity</a>
         <a class="icon-link" href="https://github.com/ismilesen" target="_blank" rel="noreferrer">
           <img src="../assets/icons/github.svg" alt="" />
           <span>GitHub</span>
@@ -321,23 +320,27 @@
         <div class="section-heading">
           <p class="section-number">08</p>
           <div>
-            <h2>Video demonstration</h2>
+            <h2>Video Demonstration</h2>
             <p class="section-summary">
-              A demonstration video can be added locally without changing the page layout.
+              A walkthrough of BananaSpice showing the upload pipeline,
+              3D visualization, live simulation, and interactive controls.
             </p>
           </div>
         </div>
 
-        <div class="video-placeholder" role="group" aria-label="Video demonstration placeholder">
-          <span class="video-play" aria-hidden="true">▶</span>
-          <h3>BananaSpice demonstration</h3>
-          <p>
-            Add the final video as
-            <code>assets/videos/bananaspice-demo.mp4</code>, then replace this placeholder
-            with the provided video element.
-          </p>
-        </div>
-      </section>
+  <div class="video-container">
+    <video
+      controls
+      playsinline
+      preload="metadata"
+      poster="../assets/images/projects/bananaspice/3d-simulation-live.jpeg"
+      width="100%"
+    >
+      <source src="../assets/videos/bananaspice-demo.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+  </div>
+</section>
 
       <section class="project-section container">
         <div class="showcase-layout">
