@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="ObservaStack, an in-development Kubernetes observability platform built by Murat Ismail Sen using FastAPI, OpenTelemetry, Prometheus, Grafana, Docker, and Python." />
+  <title>ObservaStack | Murat Ismail Sen</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="../assets/css/tokens.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/project.css" />
+  <link rel="stylesheet" href="../assets/css/observastack.css" />
+  <script src="../assets/js/main.js" defer></script>
+</head>
+
+<body class="observa-page">
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="../index.html">MIS</a>
+      <div class="nav-links static-links">
+        <a href="../index.html#projects">Projects</a>
+        <a href="cybersecurity.html">Cybersecurity</a>
+        <a class="icon-link" href="https://github.com/ismilesen" target="_blank" rel="noreferrer">
+          <img src="../assets/icons/github.svg" alt="" />
+          <span>GitHub</span>
+        </a>
+        <a class="icon-link" href="https://www.linkedin.com/in/ismail-sen-361b0a310/" target="_blank" rel="noreferrer">
+          <img src="../assets/icons/linkedin.svg" alt="" />
+          <span>LinkedIn</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <header class="project-hero container">
+        <a href="../index.html#projects" class="back-link">← Back to projects</a>
+        <div class="project-kicker">
+          <span>In development</span>
+          <span>Cloud · Observability · AI Systems</span>
+        </div>
+        <h1>ObservaStack</h1>
+        <p class="project-lede">
+          An observability platform for Kubernetes-hosted inference services,
+          designed to collect operational telemetry today and support intelligent
+          incident analysis as the system evolves.
+        </p>
+      </header>
+
+      <section class="container project-media-hero">
+        <figure class="observa-hero-panel">
+          <img src="../assets/images/projects/observastack/grafana-dashboard.png"
+            alt="ObservaStack Grafana dashboard showing request rate, latency, throughput, replica availability, memory, CPU, and active alerts" />
+          <figcaption class="observa-hero-caption">
+            <span>Operational visibility</span>
+            <h2>Telemetry from a containerized inference service, running through a local Kubernetes observability
+              stack.</h2>
+          </figcaption>
+        </figure>
+
+        <div class="observa-tech-strip" aria-label="ObservaStack technology stack">
+          <div class="observa-tech-item"><img src="../assets/images/projects/observastack/python.webp"
+              alt="" /><span>Python</span></div>
+          <div class="observa-tech-item"><img src="../assets/images/projects/observastack/fastapi.png"
+              alt="" /><span>FastAPI</span></div>
+          <div class="observa-tech-item"><img src="../assets/images/projects/observastack/docker.png"
+              alt="" /><span>Docker</span></div>
+          <div class="observa-tech-item"><img src="../assets/images/projects/observastack/kubernetes.svg"
+              alt="" /><span>Kubernetes</span></div>
+          <div class="observa-tech-item"><img src="../assets/images/projects/observastack/opentelemetry.png"
+              alt="" /><span>OpenTelemetry</span></div>
+          <div class="observa-tech-item"><img src="../assets/images/projects/observastack/prometheus.webp"
+              alt="" /><span>Prometheus</span></div>
+          <div class="observa-tech-item"><img src="../assets/images/projects/observastack/grafana.webp"
+              alt="" /><span>Grafana</span></div>
+        </div>
+      </section>
+
+      <section class="container metadata-strip">
+        <div><span>Type</span><strong>Independent systems project</strong></div>
+        <div><span>Role</span><strong>Designer and developer</strong></div>
+        <div><span>Environment</span><strong>Docker + Minikube</strong></div>
+        <div><span>Current focus</span><strong>Metrics and dashboards</strong></div>
+        <div><span>Status</span><strong>Active development</strong></div>
+      </section>
+
+      <section class="project-section container narrow">
+        <p class="section-number">01</p>
+        <h2>Project objective</h2>
+        <p class="lead-paragraph">
+          ObservaStack is being built to explore how a modern inference service can
+          be made observable from the beginning rather than instrumented after
+          operational problems appear.
+        </p>
+        <p class="lead-paragraph">
+          The implemented foundation exposes service and Kubernetes metrics through
+          OpenTelemetry and Prometheus, then presents the resulting signals in Grafana.
+          Future stages will use correlated telemetry to produce structured incident
+          context for automated analysis.
+        </p>
+      </section>
+
+      <section class="project-section container">
+        <div class="section-heading">
+          <p class="section-number">02</p>
+          <div>
+            <h2>Current architecture</h2>
+            <p class="section-summary">
+              The architecture keeps service logic, instrumentation, collection,
+              visualization, and future analysis responsibilities separate.
+            </p>
+          </div>
+        </div>
+
+        <<div class="observa-architecture">
+
+          <div class="observa-node">
+            <img src="../assets/images/projects/observastack/python.webp" alt="Python">
+            <strong>Python</strong>
+            <small>Inference application</small>
+          </div>
+
+          <div class="observa-arrow">→</div>
+
+          <div class="observa-node">
+            <img src="../assets/images/projects/observastack/fastapi.png" alt="FastAPI">
+            <strong>FastAPI</strong>
+            <small>REST API</small>
+          </div>
+
+          <div class="observa-arrow">→</div>
+
+          <div class="observa-node">
+            <img src="../assets/images/projects/observastack/opentelemetry.png" alt="OpenTelemetry">
+            <strong>OpenTelemetry</strong>
+            <small>Instrumentation</small>
+          </div>
+
+          <div class="observa-arrow">→</div>
+
+          <div class="observa-node">
+            <img src="../assets/images/projects/observastack/prometheus.webp" alt="Prometheus">
+            <strong>Prometheus</strong>
+            <small>Metrics Collection</small>
+          </div>
+
+          <div class="observa-arrow">→</div>
+
+          <div class="observa-node">
+            <img src="../assets/images/projects/observastack/grafana.webp" alt="Grafana">
+            <strong>Grafana</strong>
+            <small>Visualization</small>
+          </div>
+
+          <div class="observa-arrow">→</div>
+
+          <div class="observa-node roadmap">
+            <div class="ai-circle">
+              AI
+            </div>
+
+            <strong>Incident Engine</strong>
+
+            <small>Roadmap</small>
+          </div>
+
+          </div>
+      </section>
+
+      <section class="project-section container">
+        <div class="section-heading">
+          <p class="section-number">03</p>
+          <div>
+            <h2>Implemented progress</h2>
+            <p class="section-summary">
+              The portfolio distinguishes working components from active and future work.
+            </p>
+          </div>
+        </div>
+
+        <div class="observa-progress-grid">
+          <article class="observa-progress-card">
+            <header>
+              <h3>Containerized API</h3><span class="status-complete">Complete</span>
+            </header>
+            <p>A Python and FastAPI service runs in Docker with operational endpoints and a repeatable local
+              environment.</p>
+          </article>
+          <article class="observa-progress-card">
+            <header>
+              <h3>Kubernetes deployment</h3><span class="status-complete">Complete</span>
+            </header>
+            <p>The service is deployed locally through Minikube, providing a realistic environment for replica and
+              resource monitoring.</p>
+          </article>
+          <article class="observa-progress-card">
+            <header>
+              <h3>Metrics pipeline</h3><span class="status-complete">Complete</span>
+            </header>
+            <p>OpenTelemetry instrumentation exposes application signals that Prometheus can collect and query.</p>
+          </article>
+          <article class="observa-progress-card">
+            <header>
+              <h3>Grafana dashboard</h3><span class="status-complete">Complete</span>
+            </header>
+            <p>Dashboards visualize request rate, throughput, P95 latency, response codes, resource usage, replica
+              state, and active alerts.</p>
+          </article>
+          <article class="observa-progress-card">
+            <header>
+              <h3>Incident correlation</h3><span class="status-active">In design</span>
+            </header>
+            <p>Related detections will be grouped into a single incident so downstream analysis receives one coherent
+              operational event.</p>
+          </article>
+          <article class="observa-progress-card">
+            <header>
+              <h3>AI analysis layer</h3><span class="status-roadmap">Roadmap</span>
+            </header>
+            <p>A provider-independent interface is planned for incident summaries, evidence review, and root-cause
+              hypotheses.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="project-section container">
+        <div class="section-heading">
+          <p class="section-number">04</p>
+          <div>
+            <h2>Development evidence</h2>
+            <p class="section-summary">
+              Screenshots show the running local infrastructure and the signals currently available.
+            </p>
+          </div>
+        </div>
+
+        <div class="observa-gallery">
+
+          <figure>
+
+            <img src="../assets/images/projects/observastack/docker-minikube.png">
+
+            <figcaption>
+
+              Docker Desktop running the local Minikube Kubernetes cluster.
+
+            </figcaption>
+
+          </figure>
+
+          <figure>
+
+            <img src="../assets/images/projects/observastack/prometheus-status.png">
+
+            <figcaption>
+
+              Prometheus target health showing active scrape endpoints and successful metric collection.
+
+            </figcaption>
+
+          </figure>
+
+          <figure>
+
+            <img src="../assets/images/projects/observastack/grafana-dashboard.png">
+
+            <figcaption>
+
+              Grafana dashboard visualizing latency, throughput, replica health, memory usage, CPU utilization, and
+              alerts.
+
+            </figcaption>
+
+          </figure>
+
+        </div>
+      </section>
+
+      <section class="project-section container">
+        <div class="section-heading">
+          <p class="section-number">05</p>
+          <div>
+            <h2>Engineering decisions</h2>
+            <p class="section-summary">
+              The project is organized around maintainability and evidence-driven incident analysis.
+            </p>
+          </div>
+        </div>
+
+        <div class="observa-decisions">
+          <article class="observa-decision">
+            <span>01 / Observability first</span>
+            <h3>Make behavior measurable early</h3>
+            <p>Instrumentation was added during the foundation stage so architectural changes can be evaluated with real
+              service signals.</p>
+          </article>
+          <article class="observa-decision">
+            <span>02 / Incident grouping</span>
+            <h3>Analyze causes, not duplicate alerts</h3>
+            <p>Events sharing the same source and operational context are intended to be consolidated before an AI
+              provider is called.</p>
+          </article>
+          <article class="observa-decision">
+            <span>03 / Provider abstraction</span>
+            <h3>Keep analysis vendors replaceable</h3>
+            <p>The planned AI boundary isolates provider-specific code so models can change without forcing changes
+              across the telemetry pipeline.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="project-section container">
+        <div class="section-heading">
+          <p class="section-number">06</p>
+          <div>
+            <h2>Roadmap</h2>
+            <p class="section-summary">
+              The roadmap records intended direction without presenting planned features as completed work.
+            </p>
+          </div>
+        </div>
+
+        <div class="observa-roadmap">
+          <article class="observa-roadmap-column">
+            <h3>Foundation</h3>
+            <ul>
+              <li>Containerized FastAPI service</li>
+              <li>Minikube deployment</li>
+              <li>OpenTelemetry metrics</li>
+              <li>Prometheus collection</li>
+              <li>Grafana dashboards</li>
+            </ul>
+          </article>
+          <article class="observa-roadmap-column">
+            <h3>Next</h3>
+            <ul>
+              <li>Structured logs and distributed traces</li>
+              <li>Alert normalization</li>
+              <li>Incident grouping and deduplication</li>
+              <li>Persistent incident storage</li>
+              <li>Provider-neutral AI interface</li>
+            </ul>
+          </article>
+          <article class="observa-roadmap-column">
+            <h3>Future</h3>
+            <ul>
+              <li>AI-generated incident summaries</li>
+              <li>Root-cause hypotheses with evidence</li>
+              <li>Security-focused detections</li>
+              <li>Production Kubernetes deployment</li>
+              <li>Multi-service and multi-cluster support</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="project-footer-cta container">
+        <p class="mono-label">Active development</p>
+        <h2>ObservaStack will continue to evolve as telemetry, correlation, storage, and AI analysis are implemented.
+        </h2>
+        <a class="button button-secondary" href="../index.html#projects">Return to projects</a>
+      </section>
+    </article>
+  </main>
+
+  <footer class="footer container">
+    <p>Murat Ismail Sen</p>
+    <p id="copyright"></p>
+  </footer>
+</body>
+
+</html>
