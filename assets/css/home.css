@@ -269,7 +269,7 @@
 }
 
 .supporting-project-card:hover .supporting-project-media img {
-  transform: scale(1.025);
+  transform: scale(1.1);
 }
 
 .supporting-project-content {
@@ -678,4 +678,15 @@
   .education-campus-image img {
     min-height: 320px;
   }
+}
+/* ObservaStack */
+
+.supporting-project-media img{
+    
+    
+    background:#fff;
+}
+
+.supporting-project-media{
+    background:#fff;
 }
